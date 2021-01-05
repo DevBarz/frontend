@@ -157,13 +157,14 @@ React.useEffect( () => {
      calculateBalance={calculateBalance}/>
      </Route> 
 
-     <Route path="/cryptowallet" exact component={()=> 
+     <Route path="/cryptowallet" exact>
      <Cryptowallet walletData={props.walletData} 
      accountBalance={accountBalance}
      prepareBalance={prepareBalance}
      calculateBalance={calculateBalance}
      portfolioBalance={portfolioBalance}
-     usdBalance={props.usdBalance}/>}/>
+     usdBalance={props.usdBalance}/>
+     </Route> 
 
      <Route path="/fiatwallet" exact component={Fiatwallet}/>
 
