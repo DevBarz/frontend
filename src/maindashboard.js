@@ -137,7 +137,7 @@ React.useEffect( () => {
     <div >
       <Navbar/>
      <Switch>
-     <Route path="/swap" exact component={()=> 
+     <Route path="/swap" exact>
      <Swap walletData={props.walletData} 
      swap={swap} 
      confirm={confirm} 
@@ -154,7 +154,8 @@ React.useEffect( () => {
      handlePrice={handlePrice}
      swapSetter={swapSetter}
      prepareBalance={prepareBalance}
-     calculateBalance={calculateBalance}/>}/>
+     calculateBalance={calculateBalance}/>
+     </Route> 
 
      <Route path="/cryptowallet" exact component={()=> 
      <Cryptowallet walletData={props.walletData} 
